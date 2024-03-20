@@ -36,9 +36,11 @@ const App = () => {
     if (term === "") {
       newResult = "Enter Valid Input";
       setIsGameOver(false); // Hide text if the guess is incorrect
+      setTerm("");
     } else if (isNaN(term) || parseInt(term) < 1 || parseInt(term) > 20) {
       newResult = "Enter a valid number between 1 and 20";
       setIsGameOver(false); // Hide text if the guess is incorrect
+      setTerm("");
     } else {
       setStepCount(stepCount + 1);
 
